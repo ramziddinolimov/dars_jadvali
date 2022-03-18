@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    background-image: url("./exploding_smoke-wallpaper-2560x1440.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.frontend_text{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 20px;
+    font-size: 6em;
+    color: #fff;
+    text-shadow: 0 0 20px #ff005b;
+    letter-spacing: 5px;
+    animation: text 5s 2;
+}
+
+.frontend_text::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: -1;
+    color: #ff005b;
+    filter: blur(15px);
+}
+
+.frontend_text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fe3a80;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+
+@keyframes text {
+    0%{
+        color: rgb(173, 219, 8);
+        margin-bottom: -40px;
+
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+
+
+.wrapper{
+    display: inline-flex;
+    position: absolute;
+    top: 23%;
+    left: 35%;
+}
+
+.wrapper .static_text{  
+    font-size: 60px;
+    color: rgb(251, 253, 250);
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+
+
+.button{
+    display: flex;
+    margin-top: 350px;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+button{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #f3f7fa;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+button:hover{
+    color: #fafcfd;
+    background: #05991d;
+    box-shadow: 0 0 10px #21f34f, 0 0 40px #21f34f, 0 0 80px #21f34f;
+    transition-delay: 1s;
+}
+
+button span{
+    position: absolute;
+    display: block;
+}
+
+button span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#21f34f);
+}
+
+button:hover span:nth-child(1)
+{
+    left: 100%;
+    transition: 1s;
+}
+
+button span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#21f34f);
+}
+
+button:hover span:nth-child(3)
+{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s ;
+}
+
+button span:nth-child(2){
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#21f34f);
+}
+
+button:hover span:nth-child(2)
+{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s ;
+}
+
+button span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#21f34f);
+}
+
+button:hover span:nth-child(4)
+{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s ;
+}
+
+
+#content #lessonElement{
+    margin-top: 80px;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+#content #lessonElement li{
+    padding: 30px;
+    animation: text 2s 1;
+}
+
+@keyframes text {
+    0%{
+        margin-top: -100px;
+        color: rgb(219, 216, 8);
+        
+
+    }
+    30%{
+        
+        margin-bottom: -10px;
+    }
+    50%{
+        
+        margin-bottom: -30px;
+    }
+}
+
+
