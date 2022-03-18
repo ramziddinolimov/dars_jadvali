@@ -1,5 +1,5 @@
 var typed = new Typed(".typing", {
-    strings: ["Html", "Css", "Sass", "Bootstrap", "JavaScript", "Vue js", "React js"],
+    strings: ["Html", "Css", "Sass", "Bootstrap", "JavaScript", "Vue js", "React js", "Angular js"],
     typeSpeed: 200,
     backSpeed: 60,
     loop: true
